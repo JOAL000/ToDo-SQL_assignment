@@ -36,9 +36,29 @@ public class PersonTest {
     }
 
     @Test
-    public void testGetSummary() {
+    public void testToString() {
         Person person = new Person(1, "John", "Doe", "john.doe@example.com");
-        String expectedSummary = "Person{id=1, firstName='John', lastName='Doe', email='john.doe@example.com'}";
-        assertEquals(expectedSummary, person.getSummary());
+        String expected = "Person{id=1, firstName='John', lastName='Doe', email='john.doe@example.com'}";
+        assertEquals(expected, person.toString());
+    }
+
+    @Test
+    public void testEquals() {
+        Person person1 = new Person(1, "John", "Doe", "john.doe@example.com");
+        Person person2 = new Person(1, "John", "Doe", "john.doe@example.com");
+        Person person3 = new Person(2, "Jane", "Doe", "jane.doe@example.com");
+
+        assertEquals(person1, person2);
+        assertNotEquals(person1, person3);
+    }
+
+    @Test
+    public void testHashCode() {
+        Person person1 = new Person(1, "John", "Doe", "john.doe@example.com");
+        Person person2 = new Person(1, "John", "Doe", "john.doe@example.com");
+        Person person3 = new Person(2, "Jane", "Doe", "jane.doe@example.com");
+
+        assertEquals(person1.hashCode(), person2.hashCode());
+        assertNotEquals(person1.hashCode(), person3.hashCode());
     }
 }
