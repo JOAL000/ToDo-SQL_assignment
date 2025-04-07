@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Model;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -10,7 +10,24 @@ public class TodoItem {
     private String taskDescription;
     private LocalDate deadLine;
     private boolean done;
-    private Person creator;
+    private int creator;
+
+    public TodoItem(int id, String title,String taskDescription,LocalDate deadLine, boolean done, int creator) {
+        this.taskDescription = taskDescription;
+        this.creator = creator;
+        this.done = done;
+        this.deadLine = deadLine;
+        this.title = title;
+        this.id = id;
+    }
+
+    public TodoItem(String title, String taskDescription, LocalDate deadLine, boolean done, int creator) {
+        this.title = title;
+        this.taskDescription = taskDescription;
+        this.deadLine = deadLine;
+        this.done = done;
+        this.creator = creator;
+    }
 
 
     public int getId() {
@@ -58,11 +75,11 @@ public class TodoItem {
         this.done = done;
     }
 
-    public Person getCreator() {
+    public int getCreator() {
         return creator;
     }
 
-    public void setCreator(Person creator) {
+    public void setCreator(int creator) {
         this.creator = creator;
     }
 

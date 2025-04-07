@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Model;
 
 import java.util.Objects;
 
@@ -12,6 +12,12 @@ public class Person {
 
     public Person(int id, String firstName, String lastName, String email) {
         setId(id);
+        setFirstName(firstName);
+        setLastName(lastName);
+        setEmail(email);
+    }
+
+    public Person( String firstName, String lastName, String email) {
         setFirstName(firstName);
         setLastName(lastName);
         setEmail(email);

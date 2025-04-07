@@ -1,7 +1,7 @@
 
-import org.example.Person;
-import org.example.TodoItem;
-import org.example.TodoItemTask;
+import org.example.Model.Person;
+import org.example.Model.TodoItem;
+import org.example.Model.TodoItemTask;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
