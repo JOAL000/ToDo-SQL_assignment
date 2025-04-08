@@ -69,6 +69,7 @@ public class TodoItemDAOsql implements TodoItemDAO {
 
     @Override
     public Collection<TodoItem> findByAssignee(Person assignee) {
+
         return findByAssignee(assignee.getId());
     }
 

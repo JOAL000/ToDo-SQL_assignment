@@ -36,7 +36,7 @@ public class Main {
 
             // Test read method
             System.out.println("Reading persons:");
-            System.out.println(personDAO.findById(person1.getId()));
+            System.out.println(personDAO.findById(50));
             System.out.println(personDAO.findById(person2.getId()));
 
             // Test update method
@@ -58,8 +58,8 @@ public class Main {
             }
 
             // Create new TodoItem instances
-             TodoItem todoItem1 = new TodoItem("Buy groceries", "Buy milk, eggs, and bread", LocalDate.of (2025,6,12),false,person1.getId());
-             TodoItem todoItem2 = new TodoItem("Finish homework", "Complete math assignment", LocalDate.of (2025,6,15),false,person1.getId());
+             TodoItem todoItem1 = new TodoItem("Buy groceries", "Buy milk, eggs, and bread", LocalDate.of (2025,6,12),false,1);
+             TodoItem todoItem2 = new TodoItem("Finish homework", "Complete math assignment", LocalDate.of (2025,6,15),false,1);
 
             // Test create method
             System.out.println("Creating TodoItems:");
@@ -81,7 +81,7 @@ public class Main {
 
             // Test findByAssignee method
             System.out.println("Finding TodoItems by assignee:");
-            Collection<TodoItem> todoItemsByAssignee = todoItemDAO.findByAssignee(person1.getId());
+            Collection<TodoItem> todoItemsByAssignee = todoItemDAO.findByAssignee(5);
             for (TodoItem todoItem : todoItemsByAssignee) {
                 System.out.println(todoItem);
             }
