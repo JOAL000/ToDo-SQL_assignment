@@ -8,7 +8,7 @@ public class Person {
     private String firstName;
     private String lastName;
     private String email;
-    private AppUser credentials;
+    //private AppUser credentials;
 
     public Person(int id, String firstName, String lastName, String email) {
         setId(id);
@@ -63,13 +63,13 @@ public class Person {
 
     }
 
-    public AppUser getCredentials() {
-        return credentials;
-    }
-
-    public void setCredentials(AppUser credentials) {
-        this.credentials = credentials;
-    }
+//    public AppUser getCredentials() {
+//        return credentials;
+//    }
+//
+//    public void setCredentials(AppUser credentials) {
+//        this.credentials = credentials;
+//    }
 
     @Override
     public String toString() {
